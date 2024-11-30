@@ -39,4 +39,5 @@ models:
   dbt_analytics_engineer_book:
     # Applies to all files under models/example/
     staging:
-      materialized: view
+      +materialized: view
+        

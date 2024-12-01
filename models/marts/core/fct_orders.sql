@@ -20,3 +20,5 @@ select
     end as is_order_completed
 from orders as ord
 left join payment_type_orders as pto ON ord.order_id = pto.order_id
+-- Add micro here
+{{- limit_dataset_if_not_deploy_env('order_date', 3)}}
